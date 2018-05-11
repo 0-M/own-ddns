@@ -1,3 +1,3 @@
 export let config = {
-    timeout: 5000
-};
+    updateInterval: 5000
+}

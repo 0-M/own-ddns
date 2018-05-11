@@ -8,12 +8,17 @@ export let getPublicIP = function(success, error) {
      
         
         if (err) {
-            console.log("Error: " + err.message);
+
+            console.log("Error: " + err.message)
             error(err)
+        
         } else {
+
             let json = JSON.parse(body)
             success(json['ip'])
+        
         }
-    }
+    
+    })
 
 }

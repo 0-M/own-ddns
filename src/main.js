@@ -1,7 +1,13 @@
 
-import './config'
-import './components/update'
+import {config} from './config'
+import {updater} from './components/update'
 
-let timeout = config.timeout
+let updateInterval = config.updateInterval
 
-setInterval(() => runAllUpdates(), timeout)
+updater.loadProviders()
+
+setInterval(function(){
+
+    updater.runAllUpdates() 
+
+}, updateInterval)
